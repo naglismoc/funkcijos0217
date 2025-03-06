@@ -57,3 +57,27 @@ pavarde = "Marozaitis"
 initials = make_initials(vardas, pavarde)
 
 print(initials)
+
+def add_numbers(a = 0, b = 0):# su defaultinemis reiksmemis
+    return a + b
+
+print(add_numbers()) #nieko nepadaviau, suveike dvi defaultines reiksmes
+print(add_numbers(10))#padaviau 1 sk, ji priskyre kintamajam a, b gavo default reiskme
+print(add_numbers(b=10))#padaviau 1 sk, nurodiau, kad ji bus priskirta b kintamajam. a gavo default reiskme
+
+sk = 61852.32150653649853
+print(round(sk))
+print(round(sk, 2))
+print(round(sk, 5))
+
+def generateRndStr(length):
+  symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZ12345678901234567890"
+  text = ""
+  for i in range(length):
+    text += symbols[random.randint(0,len(symbols) -1) ]
+  return text
+
+rnd_str = generateRndStr(10)
+print(rnd_str)
+
+
