@@ -57,3 +57,57 @@ pavarde = "Marozaitis"
 initials = make_initials(vardas, pavarde)
 
 print(initials)
+
+def add_numbers(a = 0, b = 0):# su defaultinemis reiksmemis
+    return a + b
+
+print(add_numbers()) #nieko nepadaviau, suveike dvi defaultines reiksmes
+print(add_numbers(10))#padaviau 1 sk, ji priskyre kintamajam a, b gavo default reiskme
+print(add_numbers(b=10))#padaviau 1 sk, nurodiau, kad ji bus priskirta b kintamajam. a gavo default reiskme
+
+sk = 61852.32150653649853
+print(round(sk))
+print(round(sk, 2))
+print(round(sk, 5))
+
+def generateRndStr(length):
+  symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZ12345678901234567890"
+  text = ""
+  for i in range(length):
+    text += symbols[random.randint(0,len(symbols) -1) ]
+  return text
+
+rnd_str = generateRndStr(10)
+print(rnd_str)
+
+
+def reverseString(txt):
+    # return txt[ : :-1] #1
+    rstr = "" #2
+    # for symbol in txt:
+    #     rstr = symbol + rstr
+    # return rstr
+    # for i in range( (len(txt) -1), -1, -1):# range( (6-1), -1, -1) #3
+    #    rstr += txt[i]
+    # return rstr
+    # for i in reversed(range(len(txt))): #4
+    #    rstr += txt[i]
+    # return rstr
+    return "".join(list(reversed(txt))) #5
+
+#       012345
+text = "Naglis"
+print(reverseString(text))
+
+rng = range(0,5)
+print(list(rng))
+print(len(text))
+rng2 = range(0, len(text))
+print(list(rng2))
+#
+# for i in range(0, len(text)):
+#     print(text[i])
+
+#               5 4 3 2 1 0
+rng3 = range( (len(text)-1), 0-1, -1)
+print(list(rng3))
