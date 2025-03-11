@@ -81,3 +81,34 @@ rnd_str = generateRndStr(10)
 print(rnd_str)
 
 
+
+def reverseString(txt):
+    # return txt[ : :-1] #1
+    rstr = "" #2
+    # for symbol in txt:
+    #     rstr = symbol + rstr
+    # return rstr
+    # for i in range( (len(txt) -1), -1, -1):# range( (6-1), -1, -1) #3
+    #    rstr += txt[i]
+    # return rstr
+    # for i in reversed(range(len(txt))): #4
+    #    rstr += txt[i]
+    # return rstr
+    return "".join(list(reversed(txt))) #5
+
+#       012345
+text = "Naglis"
+print(reverseString(text))
+
+rng = range(0,5)
+print(list(rng))
+print(len(text))
+rng2 = range(0, len(text))
+print(list(rng2))
+#
+# for i in range(0, len(text)):
+#     print(text[i])
+
+#               5 4 3 2 1 0
+rng3 = range( (len(text)-1), 0-1, -1)
+print(list(rng3))
